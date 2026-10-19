@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore travel guides, destination inspiration, travel tips, and unforgettable places around the world.">
+  <title>Travel Guide | Explore the World</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #243047;
+      line-height: 1.7;
+      background: #f7f9fc;
+    }
+    header {
+      background: #123b50;
+      color: white;
+      padding: 20px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    header h2 { margin: 0; }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 18px;
+    }
+    .hero {
+      text-align: center;
+      padding: 90px 20px;
+      color: white;
+      background: linear-gradient(135deg, #123b50, #188b91);
+    }
+    .hero h1 {
+      font-size: clamp(32px, 5vw, 54px);
+      line-height: 1.2;
+      margin: 0 0 18px;
+    }
+    .hero p {
+      max-width: 650px;
+      margin: 0 auto;
+      font-size: 18px;
+    }
+    main { padding: 45px 7%; }
+    .intro { text-align: center; margin-bottom: 35px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+    }
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 18px #152b3a12;
+    }
+    .card h3 { margin-top: 0; color: #147d85; }
+    .card a {
+      color: #147d85;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    footer {
+      text-align: center;
+      background: #123b50;
+      color: white;
+      padding: 22px;
+    }
+    @media (max-width: 600px) {
+      header { gap: 12px; }
+      nav a { margin: 0 12px 0 0; }
+      .hero { padding: 65px 20px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>TravelGuide</h2>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="#destinations">Destinations</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Explore the World, One Journey at a Time</h1>
+    <p>Discover beautiful destinations, travel inspiration, helpful tips, and ideas for your next adventure.</p>
+  </section>
+
+  <main>
+    <section class="intro" id="destinations">
+      <h2>Explore Our Travel Guides</h2>
+      <p>Find inspiration for your next trip with our destination guides.</p>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <h3>Discover Europe</h3>
+        <p>Explore historic cities, charming villages, scenic mountains, and cultural attractions.</p>
+        <a href="blogs/europe.html">Explore Europe →</a>
+      </article>
+      <article class="card">
+        <h3>Explore Asia</h3>
+        <p>Discover vibrant cities, beautiful islands, local traditions, and incredible landscapes.</p>
+        <a href="blogs/asia.html">Explore Asia →</a>
+      </article>
+      <article class="card">
+        <h3>Travel Tips</h3>
+        <p>Learn how to plan itineraries, prepare for flights, and make your travels smoother.</p>
+        <a href="blogs/travel-tips.html">Read Travel Tips →</a>
+      </article>
+    </section>
+
+    <section class="intro" id="about" style="margin-top:45px">
+      <h2>About TravelGuide</h2>
+      <p>TravelGuide shares useful travel information to help readers discover destinations and plan more enjoyable journeys.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 TravelGuide. All rights reserved.</p>
+  </footer>
+</body>
+</html>
