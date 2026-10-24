@@ -6,10 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Traditional Russian Winter Experiences Beyond Snowy City Streets | TravelGuide</title>
-
-  <meta name="description" content="Discover traditional Russian winter experiences, from relaxing banya rituals and horse-drawn sleigh rides to village life, winter food, and cultural traditions.">
-
+  <meta name="description" content="Discover traditional Russian winter experiences, from banya rituals and horse-drawn sleigh rides to village life, local food and seasonal traditions.">
   <meta name="theme-color" content="#123b35">
+
   <link rel="canonical" href="https://sanvishetty436-collab.github.io/travelguide/traditional-russian-winter-experiences.html">
 
   <style>
@@ -23,16 +22,14 @@
       --ink: #1d302c;
       --muted: #65746d;
       --white: #fff;
-      --shadow: 0 18px 45px rgba(18, 59, 53, .10);
+      --shadow: 0 18px 45px rgba(18,59,53,.10);
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 90px;
+      scroll-padding-top: 100px;
     }
 
     body {
@@ -41,26 +38,26 @@
       background: var(--cream);
       font-family: Inter, ui-sans-serif, system-ui, -apple-system,
         BlinkMacSystemFont, "Segoe UI", sans-serif;
-      line-height: 1.8;
+      line-height: 1.75;
     }
 
-    a {
-      color: inherit;
-    }
+    a { color: inherit; }
+
+    h1, h2, h3, p { margin-top: 0; }
 
     .site-header {
       position: sticky;
       top: 0;
-      z-index: 10;
-      background: rgba(251, 248, 240, .95);
+      z-index: 100;
+      background: rgba(251,248,240,.96);
       backdrop-filter: blur(14px);
-      border-bottom: 1px solid rgba(18, 59, 53, .10);
+      border-bottom: 1px solid rgba(18,59,53,.10);
     }
 
     .nav-wrap {
-      width: min(1160px, 90%);
-      margin: auto;
+      width: min(1160px,90%);
       min-height: 76px;
+      margin: auto;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -71,11 +68,12 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
+      color: var(--forest);
       font-size: 1.25rem;
       font-weight: 850;
       letter-spacing: -.04em;
       text-decoration: none;
-      color: var(--forest);
+      white-space: nowrap;
     }
 
     .brand-mark {
@@ -96,11 +94,11 @@
     }
 
     .nav-links a {
-      text-decoration: none;
-      font-weight: 700;
-      font-size: .95rem;
       padding: 10px 16px;
       border-radius: 999px;
+      text-decoration: none;
+      font-size: .95rem;
+      font-weight: 700;
       transition: .2s ease;
     }
 
@@ -118,22 +116,42 @@
     .menu-toggle {
       display: none;
       border: 0;
-      background: var(--mint);
-      color: var(--forest);
       border-radius: 12px;
       padding: 10px 13px;
+      background: var(--mint);
+      color: var(--forest);
       font-size: 1.2rem;
       cursor: pointer;
     }
 
+    /* Article title area */
+
     .article-hero {
+      padding: 78px 0 86px;
       background: var(--forest);
       color: white;
-      padding: 76px 0 64px;
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
     }
 
-    .article-hero-inner {
-      width: min(1000px, 90%);
+    .article-hero::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      width: 360px;
+      height: 360px;
+      right: -120px;
+      bottom: -230px;
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: 50%;
+      box-shadow:
+        0 0 0 45px rgba(255,255,255,.035),
+        0 0 0 90px rgba(255,255,255,.025);
+    }
+
+    .hero-inner {
+      width: min(1000px,90%);
       margin: auto;
     }
 
@@ -141,11 +159,11 @@
       display: inline-flex;
       align-items: center;
       gap: 9px;
-      text-transform: uppercase;
-      letter-spacing: .16em;
+      color: #c8efdb;
       font-size: .76rem;
       font-weight: 800;
-      color: #c8efdb;
+      letter-spacing: .16em;
+      text-transform: uppercase;
     }
 
     .eyebrow::before {
@@ -155,80 +173,85 @@
       background: var(--coral);
     }
 
-    h1, h2, h3, p {
-      margin-top: 0;
-    }
-
     .article-hero h1 {
       max-width: 900px;
-      margin: 23px 0;
-      font-size: clamp(2.5rem, 6vw, 4.7rem);
-      line-height: 1.08;
+      margin: 22px 0;
+      font-size: clamp(2.5rem,6vw,4.8rem);
+      line-height: 1.05;
       letter-spacing: -.06em;
     }
 
     .article-hero h1 span {
       color: #c8efdb;
-      font-family: Georgia, serif;
-      font-style: italic;
+      font-family: Georgia,serif;
       font-weight: 500;
+      font-style: italic;
     }
 
-    .article-intro {
-      max-width: 760px;
-      color: rgba(255, 255, 255, .85);
+    .hero-description {
+      max-width: 750px;
+      color: rgba(255,255,255,.85);
       font-size: 1.12rem;
       line-height: 1.8;
       margin-bottom: 0;
     }
 
-    .article-meta {
+    .article-tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 25px;
-      color: #d9eee2;
-      font-size: .9rem;
+      gap: 10px;
+      margin-top: 26px;
     }
 
-    .article-meta span {
-      background: rgba(255, 255, 255, .09);
+    .article-tags span {
       padding: 7px 13px;
+      border: 1px solid rgba(255,255,255,.2);
       border-radius: 999px;
+      color: #e2f3e8;
+      font-size: .84rem;
     }
 
-    .article-featured {
-      width: min(1000px, 90%);
-      margin: -25px auto 0;
+    /* Featured image */
+
+    .featured-wrap {
+      width: min(1000px,90%);
+      margin: -28px auto 0;
       position: relative;
-      z-index: 1;
+      z-index: 2;
     }
 
-    .article-featured img {
+    .featured-image {
       display: block;
       width: 100%;
-      height: auto;
-      max-height: 650px;
+      height: clamp(280px,48vw,560px);
       object-fit: cover;
-      object-position: center;
+      object-position: center 55%;
+      background: var(--sand);
       border-radius: 25px;
       box-shadow: var(--shadow);
-      background: var(--sand);
     }
 
+    .image-caption {
+      margin: 10px 4px 0;
+      color: var(--muted);
+      font-size: .84rem;
+    }
+
+    /* Article layout */
+
     .article-layout {
-      width: min(1000px, 90%);
+      width: min(1160px,90%);
       margin: auto;
-      padding: 58px 0 85px;
+      padding: 55px 0 90px;
       display: grid;
-      grid-template-columns: minmax(0, 1fr) 245px;
+      grid-template-columns: minmax(0,760px) minmax(210px,280px);
       gap: 45px;
       align-items: start;
     }
 
     .article-content {
       min-width: 0;
-      font-size: 1.04rem;
+      font-size: 1.03rem;
     }
 
     .article-content p {
@@ -237,19 +260,19 @@
     }
 
     .article-content h2 {
+      margin: 48px 0 17px;
       color: var(--forest);
-      font-size: clamp(1.65rem, 3.5vw, 2.25rem);
+      font-size: clamp(1.65rem,3.5vw,2.25rem);
       line-height: 1.25;
       letter-spacing: -.045em;
-      margin: 48px 0 18px;
       scroll-margin-top: 100px;
     }
 
     .article-content h3 {
-      color: var(--forest-light);
-      font-size: 1.3rem;
-      line-height: 1.4;
       margin: 28px 0 12px;
+      color: var(--forest-light);
+      font-size: 1.28rem;
+      line-height: 1.4;
     }
 
     .article-content a {
@@ -259,117 +282,106 @@
       text-underline-offset: 4px;
     }
 
-    .article-content a:hover {
-      color: var(--coral);
-    }
+    .article-content a:hover { color: var(--coral); }
 
     .article-content ul {
-      padding-left: 24px;
+      padding-left: 25px;
       margin-bottom: 25px;
       color: #394c44;
     }
 
-    .article-content li {
-      margin-bottom: 10px;
-    }
+    .article-content li { margin-bottom: 11px; }
 
-    .article-sidebar {
+    .contents {
       position: sticky;
-      top: 105px;
-      background: var(--sand);
+      top: 100px;
       padding: 25px;
-      border-radius: 20px;
+      border-radius: 22px;
+      background: var(--sand);
     }
 
-    .article-sidebar h2 {
+    .contents h2 {
       color: var(--forest);
-      font-size: 1.2rem;
-      line-height: 1.35;
+      font-size: 1.25rem;
+      line-height: 1.3;
       margin-bottom: 15px;
     }
 
-    .article-sidebar ol {
+    .contents ol {
       padding-left: 20px;
       margin: 0;
     }
 
-    .article-sidebar li {
-      margin: 0 0 12px;
+    .contents li {
+      padding: 0 0 10px;
+      color: var(--forest-light);
       font-size: .92rem;
       line-height: 1.5;
     }
 
-    .article-sidebar a {
+    .contents a {
       color: var(--forest-light);
-      text-decoration: none;
       font-weight: 650;
+      text-decoration: none;
     }
 
-    .article-sidebar a:hover {
-      text-decoration: underline;
-    }
+    .contents a:hover { text-decoration: underline; }
 
-    .article-callout {
+    .tip-box {
       margin: 30px 0;
-      padding: 24px 26px;
-      background: #eaf3e9;
+      padding: 23px 25px;
       border-left: 4px solid var(--coral);
       border-radius: 0 16px 16px 0;
+      background: #eaf3e9;
     }
 
-    .article-callout p {
-      margin-bottom: 0;
-    }
+    .tip-box p { margin: 0; }
 
     .related-box {
       margin-top: 42px;
       padding: 30px;
+      border-radius: 23px;
       background: var(--sand);
-      border-radius: 22px;
     }
 
     .related-box h2 {
-      margin-top: 0;
-      font-size: 1.7rem;
+      margin: 0 0 12px;
+      font-size: 1.8rem;
     }
 
-    .related-box p {
-      margin-bottom: 18px;
-    }
+    .related-box p { margin-bottom: 20px; }
 
     .button {
       display: inline-flex;
       justify-content: center;
       align-items: center;
       gap: 8px;
-      min-height: 47px;
-      padding: 11px 20px;
+      min-height: 48px;
+      padding: 12px 21px;
       border-radius: 999px;
       text-decoration: none;
       font-weight: 800;
       transition: transform .2s, background .2s;
     }
 
-    .button:hover {
-      transform: translateY(-2px);
-    }
+    .button:hover { transform: translateY(-2px); }
 
     .button-primary {
       background: var(--coral);
       color: white !important;
     }
 
-    .button-primary:hover {
-      background: #d96646;
-    }
+    .button-primary:hover { background: #d96646; }
 
     .back-to-top {
       display: inline-block;
       margin-top: 30px;
-      font-weight: 750;
       color: var(--forest-light);
+      font-weight: 800;
       text-decoration: none;
     }
+
+    /* Footer */
 
     footer {
       background: #0b2925;
@@ -378,74 +390,57 @@
     }
 
     .footer-inner {
-      width: min(1160px, 100%);
+      width: min(1160px,100%);
       margin: auto;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 20px;
       flex-wrap: wrap;
+      gap: 20px;
     }
+
+    .footer-brand { color: white; }
+
+    .footer-brand .brand-mark { background: var(--coral); }
 
     .footer-inner p {
       margin: 0;
-      color: rgba(255, 255, 255, .68);
+      color: rgba(255,255,255,.68);
       font-size: .9rem;
     }
 
     .footer-links {
       display: flex;
-      gap: 18px;
       flex-wrap: wrap;
+      gap: 18px;
     }
 
     .footer-links a {
       color: white;
-      text-decoration: none;
       font-size: .9rem;
+      text-decoration: none;
     }
 
-    .footer-links a:hover {
-      text-decoration: underline;
-    }
+    .footer-links a:hover { text-decoration: underline; }
 
-    .footer-brand {
-      color: white;
-    }
+    /* Responsive design */
 
-    .footer-brand .brand-mark {
-      background: var(--coral);
-    }
-
-    @media (max-width: 800px) {
+    @media (max-width: 900px) {
       .article-layout {
-        grid-template-columns: 1fr;
-        gap: 25px;
-        padding-top: 40px;
+        grid-template-columns: minmax(0,1fr);
+        gap: 30px;
       }
 
-      .article-sidebar {
+      .contents {
         position: static;
         grid-row: 1;
-      }
-
-      .article-featured img {
-        border-radius: 20px;
-      }
-
-      .article-hero {
-        padding-top: 60px;
       }
     }
 
     @media (max-width: 560px) {
-      .nav-wrap {
-        min-height: 68px;
-      }
+      .nav-wrap { min-height: 68px; }
 
-      .menu-toggle {
-        display: inline-block;
-      }
+      .menu-toggle { display: inline-block; }
 
       .nav-links {
         display: none;
@@ -453,63 +448,39 @@
         top: 68px;
         left: 5%;
         right: 5%;
-        background: var(--cream);
-        border: 1px solid rgba(18, 59, 53, .12);
-        border-radius: 18px;
         padding: 12px;
+        background: var(--cream);
+        border: 1px solid rgba(18,59,53,.12);
+        border-radius: 18px;
         box-shadow: var(--shadow);
         align-items: stretch;
         flex-direction: column;
       }
 
-      .nav-links.open {
-        display: flex;
-      }
+      .nav-links.open { display: flex; }
 
-      .nav-links a {
-        padding: 12px 15px;
-      }
+      .nav-links a { padding: 12px 15px; }
 
-      .article-hero {
-        padding: 48px 0 52px;
-      }
+      .article-hero { padding: 52px 0 60px; }
 
       .article-hero h1 {
-        font-size: clamp(2.35rem, 11vw, 3.5rem);
+        font-size: clamp(2.35rem,11vw,3.6rem);
       }
 
-      .article-intro {
-        font-size: 1rem;
+      .hero-description { font-size: 1rem; }
+
+      .featured-image {
+        height: 340px;
+        border-radius: 17px;
       }
 
-      .article-meta {
-        gap: 8px;
-      }
+      .article-layout { padding: 38px 0 60px; }
 
-      .article-featured {
-        margin-top: -18px;
-      }
+      .article-content { font-size: 1rem; }
 
-      .article-featured img {
-        border-radius: 16px;
-      }
+      .article-content h2 { margin-top: 38px; }
 
-      .article-layout {
-        padding: 35px 0 60px;
-      }
-
-      .article-content {
-        font-size: 1rem;
-      }
-
-      .article-content h2 {
-        margin-top: 38px;
-      }
-
-      .article-sidebar,
-      .related-box {
-        padding: 22px;
-      }
+      .contents, .related-box { padding: 22px; }
 
       .footer-inner {
         align-items: flex-start;
@@ -518,9 +489,7 @@
     }
 
     @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
+      html { scroll-behavior: auto; }
 
       *, *::before, *::after {
         transition-duration: .01ms !important;
@@ -532,17 +501,21 @@
 
 <body id="top">
 
+  <!-- HEADER -->
   <header class="site-header">
     <div class="nav-wrap">
-      <a class="brand" href="https://sanvishetty436-collab.github.io/travelguide/" aria-label="TravelGuide home">
+      <a class="brand"
+         href="https://sanvishetty436-collab.github.io/travelguide/"
+         aria-label="TravelGuide home">
         <span class="brand-mark">✦</span>
         TravelGuide
       </a>
 
       <button class="menu-toggle"
-        aria-label="Toggle navigation"
-        aria-expanded="false"
-        aria-controls="navigation">
+              type="button"
+              aria-label="Toggle navigation"
+              aria-expanded="false"
+              aria-controls="navigation">
         ☰
       </button>
 
@@ -557,63 +530,77 @@
 
   <main>
 
+    <!-- ARTICLE HERO -->
     <section class="article-hero">
-      <div class="article-hero-inner">
-        <span class="eyebrow">Culture · Winter travel</span>
+      <div class="hero-inner">
+        <span class="eyebrow">Russia travel guide</span>
 
         <h1>
           Traditional Russian Winter Experiences
           <span>Beyond Snowy City Streets</span>
         </h1>
 
-        <p class="article-intro">
-          Russian winter is about much more than snow-covered streets and
-          famous city landmarks. Discover the traditional customs, comforting
-          food, village life, and outdoor experiences that reveal another side
-          of the country's winter culture.
+        <p class="hero-description">
+          Winter in Russia offers travellers a chance to discover more than
+          famous landmarks and busy city centres. The season reveals a rich
+          cultural heritage through countryside villages, traditional
+          bathhouses, regional food and celebrations passed down through
+          generations.
         </p>
 
-        <div class="article-meta">
-          <span>Russia travel guide</span>
+        <div class="article-tags">
+          <span>Winter travel</span>
           <span>Culture and traditions</span>
-          <span>Winter experiences</span>
+          <span>Travel inspiration</span>
         </div>
       </div>
     </section>
 
-    <div class="article-featured">
+    <!-- FEATURED IMAGE
+         Upload your image to the repository's images folder.
+         If this HTML is in the repository root, this path is correct. -->
+    <figure class="featured-wrap">
       <img
+        class="featured-image"
         src="images/traditional-russian-winter-experiences.png"
-        alt="Snow-covered traditional Russian wooden houses and a horse-drawn sleigh in a winter village"
+        alt="Snow-covered Russian village with traditional wooden houses, a church and a horse-drawn sleigh"
         width="1024"
         height="1536"
         fetchpriority="high">
-    </div>
+      <figcaption class="image-caption">
+        Traditional village scenery offers a glimpse of winter beyond Russia's major cities.
+      </figcaption>
+    </figure>
 
+    <!-- ARTICLE AND TABLE OF CONTENTS -->
     <div class="article-layout">
 
       <article class="article-content">
 
         <p>
-          Winter gives Russia a distinctive atmosphere. Snow settles over
-          wooden houses, forests become quiet, and villages take on a
-          peaceful appearance. While Moscow and St Petersburg offer museums,
-          historic buildings, and festive streets, many memorable winter
-          experiences can be found beyond the main cities.
+          Traditional Russian winter experiences allow visitors to explore
+          local customs alongside the beauty of the country's landscapes.
+          From peaceful rural stays to seasonal outdoor activities, these
+          experiences provide a different perspective on Russian life during
+          the colder months.
         </p>
 
         <p>
-          Traditional winter life is closely connected with warmth,
-          hospitality, seasonal food, and customs passed between generations.
-          Travellers who explore these traditions can learn how people have
-          adapted to cold weather and made it an important part of everyday
-          culture.
+          Winter in Russia is not only about snow-covered streets and famous
+          landmarks. It can also be a time to discover how communities
+          maintain traditions, prepare warming meals, celebrate seasonal
+          festivals and enjoy the outdoors. The experiences available vary
+          widely by region, weather and local customs.
         </p>
 
         <p>
-          From a visit to a traditional bathhouse to a horse-drawn sleigh ride
-          through a snowy landscape, these experiences offer a different way
-          to appreciate Russia during the colder months.
+          Travellers planning a visit can explore
+          <a href="https://www.aroohatours.com/des/russia-tour-packages-from-dubai"
+             target="_blank"
+             rel="noopener noreferrer">Russia tour packages from Dubai</a>
+          to learn about available travel options and destinations. Winter
+          activities and regional experiences can be included in an itinerary
+          according to travel dates, weather and local availability.
         </p>
 
         <h2 id="banya">Experience a Traditional Russian Banya</h2>
@@ -621,23 +608,22 @@
         <p>
           The Russian banya is a traditional bathhouse and an important part
           of the country's social culture. For many people, it is a place to
-          relax, spend time with friends, and escape the cold outside.
+          relax, spend time with friends and escape the cold outside.
         </p>
 
         <p>
-          A typical banya includes a hot steam room, washing facilities, and
+          A typical banya includes a hot steam room, washing facilities and
           a cooler area where visitors can rest between sessions. Some
-          traditional bathhouses use bundles of leafy branches called
-          <em>veniki</em>, which are gently used in a customary bathing
-          practice.
+          traditional bathhouses use leafy bundles called <em>veniki</em>,
+          which are gently used as part of a customary bathing practice.
         </p>
 
         <p>
-          Visitors can experience a banya at selected public bathhouses or
-          rural guesthouses. First-time visitors should ask about local
-          etiquette, follow staff instructions, stay hydrated, and take
-          breaks whenever needed. The heat can be intense, so it is important
-          to choose an experience that feels comfortable.
+          Visitors can look for public bathhouses or rural guesthouses that
+          offer this experience. First-time visitors should ask about local
+          etiquette, follow staff instructions, stay hydrated and take
+          breaks whenever needed. The heat can be intense, so choose an
+          experience that feels comfortable.
         </p>
 
         <h2 id="sleigh">Take a Horse-Drawn Sleigh Ride</h2>
@@ -645,21 +631,20 @@
         <p>
           A horse-drawn sleigh ride offers a classic winter scene. In some
           rural areas and seasonal visitor destinations, horses pull
-          traditional sledges along snowy paths through forests, fields, or
-          village surroundings.
+          traditional sledges along snowy paths through forests, fields
+          or village surroundings.
         </p>
 
         <p>
           The experience is less about speed and more about enjoying the
-          landscape. The sound of hooves on snow, the crisp air, and the
-          sight of snow-covered trees can make a short ride feel memorable.
+          landscape. The sound of hooves on snow, crisp air and snow-covered
+          trees can make a short ride memorable.
         </p>
 
         <p>
-          Availability depends on snowfall, local operators, and the season.
+          Availability depends on snowfall, local operators and the season.
           Choose a responsible provider that treats its horses well, provides
-          suitable safety instructions, and supplies warm seating or blankets
-          when needed.
+          safety instructions and explains the route before departure.
         </p>
 
         <h2 id="villages">Discover Traditional Russian Village Life</h2>
@@ -674,9 +659,9 @@
 
         <p>
           Some heritage villages and cultural museums allow visitors to
-          explore traditional homes, household objects, handicrafts, and
+          explore traditional homes, household objects, handicrafts and
           everyday practices from earlier generations. Depending on the
-          location, visitors may also see wooden churches, local markets,
+          location, visitors may also see wooden churches, local markets
           or workshops demonstrating traditional skills.
         </p>
 
@@ -691,34 +676,34 @@
 
         <p>
           Food is another important part of the winter experience. Russian
-          cooking includes many warming dishes that are especially appealing
+          cooking includes warming dishes that are especially appealing
           after spending time outdoors in cold weather.
         </p>
 
         <h3>Soups and hearty meals</h3>
 
         <p>
-          Try traditional soups such as borscht, a beetroot-based soup
-          prepared in different ways across the region, or shchi, a cabbage
-          soup with many regional variations. Pelmeni, small dumplings often
-          filled with meat, are another familiar dish served in homes and
-          restaurants.
+          Traditional soups include borscht, a beetroot-based soup prepared
+          in different ways across the region, and shchi, a cabbage soup
+          with many regional variations. Pelmeni, small dumplings often
+          filled with meat, are another familiar dish served in homes
+          and restaurants.
         </p>
 
         <h3>Tea and sweet treats</h3>
 
         <p>
           Tea is a popular part of Russian hospitality. It may be served
-          alongside pastries, jam, honey, or other sweets. In a village
-          guesthouse or traditional café, a hot drink can be a welcome way
-          to warm up after a winter walk.
+          alongside pastries, jam, honey or other sweets. In a village
+          guesthouse or traditional café, a hot drink can be a welcome
+          way to warm up after a winter walk.
         </p>
 
-        <div class="article-callout">
+        <div class="tip-box">
           <p>
-            <strong>Travel tip:</strong> Menus and recipes vary between
+            <strong>Travel tip:</strong> Recipes and menus vary between
             regions and households. Ask about ingredients before ordering
-            if you have dietary requirements, allergies, or food preferences.
+            if you have dietary requirements or food allergies.
           </p>
         </div>
 
@@ -733,10 +718,9 @@
 
         <p>
           Celebrations can include pancakes known as <em>blini</em>, folk
-          performances, music, games, and community gatherings. The
-          atmosphere and activities differ between towns and villages,
-          but the festival is widely associated with welcoming the
-          changing season.
+          performances, music, games and community gatherings. The atmosphere
+          and activities differ between towns and villages, but the festival
+          is widely associated with welcoming the changing season.
         </p>
 
         <p>
@@ -745,52 +729,51 @@
           have different dates and programmes from larger city festivals.
         </p>
 
-        <h2 id="siberia">Explore Indigenous and Regional Traditions</h2>
+        <h2 id="regional">Explore Indigenous and Regional Traditions</h2>
 
         <p>
           Russia is a vast country with many distinct cultures and
           communities. Winter traditions are not the same everywhere, and
-          experiences in the European part of Russia may differ greatly
-          from those in Siberia and the country's northern regions.
+          experiences in European Russia may differ greatly from those in
+          Siberia and the country's northern regions.
         </p>
 
         <p>
           Some Indigenous communities in northern Russia have longstanding
           cultural relationships with reindeer herding, seasonal movement,
-          crafts, and life in demanding environments. These traditions are
+          crafts and life in demanding environments. These traditions are
           diverse and should not be treated as one single culture.
         </p>
 
         <p>
-          Travellers interested in regional heritage should look for
-          community-led cultural visits, local museums, and knowledgeable
+          Travellers interested in regional heritage can look for
+          community-led cultural visits, local museums and knowledgeable
           guides. Responsible experiences make room for local voices and
-          explain traditions in their own context rather than presenting
-          them as performances for visitors.
+          explain traditions in their own context.
         </p>
 
-        <h2 id="winter-walks">Take a Peaceful Winter Walk</h2>
+        <h2 id="walks">Take a Peaceful Winter Walk</h2>
 
         <p>
           A winter walk can be one of the simplest ways to appreciate
-          Russia's landscapes. Forest trails, frozen-looking lakes,
-          countryside paths, and quiet village roads can create beautiful
-          scenery when conditions are suitable.
+          Russia's landscapes. Forest trails, countryside paths and quiet
+          village roads can create beautiful scenery when conditions
+          are suitable.
         </p>
 
         <p>
           Always check local conditions before setting out. Snow and ice
           can make paths difficult to navigate, daylight hours may be
           limited, and temperatures can drop quickly. Choose a route that
-          matches your fitness and experience, and avoid walking onto frozen
-          rivers or lakes unless the area has been officially assessed as
-          safe.
+          matches your fitness and experience, and avoid walking onto
+          frozen rivers or lakes unless local authorities have confirmed
+          that conditions are safe.
         </p>
 
         <p>
-          Dress in warm layers, wear footwear with good grip, carry a charged
-          phone, and let someone know your plans if you are exploring away
-          from populated areas.
+          Dress in warm layers, wear footwear with good grip, carry a
+          charged phone and let someone know your plans if you are
+          exploring away from populated areas.
         </p>
 
         <h2 id="crafts">Discover Traditional Crafts and Heritage</h2>
@@ -799,7 +782,7 @@
           Winter is also a good time to explore indoor cultural activities.
           Depending on where you travel, museums and craft workshops may
           introduce visitors to traditional woodwork, painted decorations,
-          embroidery, textiles, ceramics, and other regional art forms.
+          embroidery, textiles, ceramics and other regional art forms.
         </p>
 
         <p>
@@ -815,20 +798,20 @@
           and origins to better understand the craft behind it.
         </p>
 
-        <h2 id="dog-sledding">Consider a Guided Winter Adventure</h2>
+        <h2 id="adventures">Consider a Guided Winter Adventure</h2>
 
         <p>
           In selected destinations, travellers may find guided activities
-          such as dog sledding, snowshoeing, or organised countryside
+          such as dog sledding, snowshoeing or organised countryside
           excursions. These experiences depend on local conditions,
-          available operators, and the time of year.
+          available operators and the time of year.
         </p>
 
         <p>
           Choose experienced guides who explain the route, provide suitable
-          equipment, and have clear plans for changing weather. For
+          equipment and have clear plans for changing weather. For
           animal-based activities, check how the animals are cared for
-          and whether rest, shelter, and appropriate working conditions
+          and whether rest, shelter and appropriate working conditions
           are provided.
         </p>
 
@@ -839,12 +822,12 @@
           prefer a slower pace.
         </p>
 
-        <h2 id="best-time">When Is the Best Time for Traditional Winter Experiences?</h2>
+        <h2 id="best-time">When Is the Best Time for Winter Experiences?</h2>
 
         <p>
           Winter conditions vary widely across Russia because of the
           country's size. In many destinations, December through February
-          brings a winter atmosphere, but snowfall, temperatures, and
+          brings a winter atmosphere, but snowfall, temperatures and
           daylight hours differ significantly by region.
         </p>
 
@@ -859,34 +842,34 @@
 
         <p>
           Before finalising your itinerary, check local weather forecasts,
-          transport updates, attraction opening times, and any regional
-          travel advice. Book guided activities with operators who can
-          explain their weather policies and cancellation arrangements.
+          transport updates, attraction opening times and relevant travel
+          advice. Book guided activities with operators who explain their
+          weather policies and cancellation arrangements.
         </p>
 
-        <h2 id="planning">Practical Tips for a Russian Winter Trip</h2>
+        <h2 id="tips">Practical Tips for a Russian Winter Trip</h2>
 
         <ul>
           <li>
             <strong>Dress in layers:</strong> Use thermal base layers,
-            insulating clothing, a warm outer coat, gloves, and a hat.
+            insulating clothing, a warm outer coat, gloves and a hat.
           </li>
           <li>
             <strong>Choose suitable footwear:</strong> Insulated boots
             with good grip help on snowy and icy paths.
           </li>
           <li>
-            <strong>Allow extra travel time:</strong> Snow, ice, and
-            severe weather can affect roads and public transport.
+            <strong>Allow extra travel time:</strong> Snow, ice and severe
+            weather can affect roads and public transport.
           </li>
           <li>
-            <strong>Check access requirements:</strong> Confirm visa
-            requirements, entry rules, and travel advisories for your
+            <strong>Check entry requirements:</strong> Confirm visa rules,
+            entry requirements and official travel advice for your
             nationality before departure.
           </li>
           <li>
-            <strong>Respect local customs:</strong> Ask before taking
-            photographs of people, private homes, or cultural ceremonies.
+            <strong>Respect local customs:</strong> Ask before photographing
+            people, private homes or cultural ceremonies.
           </li>
           <li>
             <strong>Keep plans flexible:</strong> Have indoor alternatives
@@ -900,15 +883,15 @@
           Traditional Russian winter experiences reveal a side of the
           country that goes beyond famous city attractions. A visit to a
           banya, a sleigh ride through a snowy landscape, a meal of
-          comforting local food, or a walk through a heritage village
-          can help travellers understand the relationship between
-          winter, culture, and everyday life.
+          comforting local food or a walk through a heritage village can
+          help travellers understand the relationship between winter,
+          culture and everyday life.
         </p>
 
         <p>
           The best experiences depend on the region you visit and the
           kind of journey you want. Take time to learn about local
-          traditions, plan around the weather, and choose responsible
+          traditions, plan around the weather and choose responsible
           guides and operators. With thoughtful planning, winter can
           offer a deeper and more memorable way to explore Russia.
         </p>
@@ -916,14 +899,13 @@
         <div class="related-box">
           <h2>Planning a Trip to Russia?</h2>
           <p>
-            Explore more destination information and travel inspiration
-            to help you prepare for your journey.
+            Explore destination information and travel options to help
+            you prepare for your journey.
           </p>
-          <a
-            class="button button-primary"
-            href="https://www.aroohatours.com/des/russia-tour-packages-from-dubai"
-            target="_blank"
-            rel="noopener noreferrer">
+          <a class="button button-primary"
+             href="https://www.aroohatours.com/des/russia-tour-packages-from-dubai"
+             target="_blank"
+             rel="noopener noreferrer">
             Explore Russia travel options ↗
           </a>
         </div>
@@ -932,20 +914,21 @@
 
       </article>
 
-      <aside class="article-sidebar" aria-label="Article contents">
+      <!-- TABLE OF CONTENTS -->
+      <aside class="contents">
         <h2>In This Article</h2>
         <ol>
-          <li><a href="#banya">Russian banya</a></li>
+          <li><a href="#banya">Traditional Russian banya</a></li>
           <li><a href="#sleigh">Horse-drawn sleigh rides</a></li>
-          <li><a href="#villages">Traditional villages</a></li>
+          <li><a href="#villages">Village life</a></li>
           <li><a href="#food">Winter food</a></li>
-          <li><a href="#festivals">Maslenitsa festival</a></li>
-          <li><a href="#siberia">Regional traditions</a></li>
-          <li><a href="#winter-walks">Winter walks</a></li>
+          <li><a href="#festivals">Maslenitsa and customs</a></li>
+          <li><a href="#regional">Regional traditions</a></li>
+          <li><a href="#walks">Winter walks</a></li>
           <li><a href="#crafts">Traditional crafts</a></li>
-          <li><a href="#dog-sledding">Winter adventures</a></li>
+          <li><a href="#adventures">Guided adventures</a></li>
           <li><a href="#best-time">Best time to visit</a></li>
-          <li><a href="#planning">Practical tips</a></li>
+          <li><a href="#tips">Practical travel tips</a></li>
           <li><a href="#conclusion">Conclusion</a></li>
         </ol>
       </aside>
@@ -953,16 +936,18 @@
     </div>
   </main>
 
+  <!-- FOOTER -->
   <footer>
     <div class="footer-inner">
-      <a
-        class="brand footer-brand"
-        href="https://sanvishetty436-collab.github.io/travelguide/">
+      <a class="brand footer-brand"
+         href="https://sanvishetty436-collab.github.io/travelguide/">
         <span class="brand-mark">✦</span>
         TravelGuide
       </a>
 
-      <p>© <span id="year">2026</span> TravelGuide. Made for curious travellers.</p>
+      <p>
+        © <span id="year">2026</span> TravelGuide. Made for curious travellers.
+      </p>
 
       <div class="footer-links">
         <a href="https://sanvishetty436-collab.github.io/travelguide/">Home</a>
